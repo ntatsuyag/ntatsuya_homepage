@@ -1,81 +1,117 @@
-# Base information
-baseURL = "https://example.com"
-languageCode = "en-gb"
-title = "ntatsuya homepage"
-# theme = "hugo-developer-portfolio"
-googleAnalytics = ""
-# for Githun pages
-publishDir = "docs"
-
-# Remove this when using normally
-# themesDir = "../../" 
-# `
-[module]
-  [[module.imports]]
-    path = "github.com/samrobbins85/hugo-developer-portfolio"
-
-# Plugins
-[params.plugins]
-
-  # CSS Plugins
-  [[params.plugins.css]]
-  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css"
-
-  # JS Plugins
-  [[params.plugins.js]]
-  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"
-  [[params.plugins.js]]
-  URL = "https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"
-
-
-# navigation
-[menu]
-
-  [[menu.main]]
-  name = "About"
-  URL = "about"
-  weight=1
-
-  [[menu.main]]
-  name = "Blog"
-  URL = "blog"
-  weight=2
-
-  [[menu.main]]
-  name = "Portfolio"
-  URL = "portfolio"
-  weight=3
-
-  [[menu.main]]
-  name = "Contact"
-  URL = "contact"
-  weight=4
-
+baseURL = "http://example.org/"
+languageCode = "en-us"
+theme = "sada"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
-home = "Home"
-# Meta data
-description = "The website of Sam Robbins, 2nd Year Computer Science Student at Durham University"
-author = "Sam Robbins"
+    name = "ntatsuya homepage"
+    title = "ntatsuya homepage"
+    author = "Tatsuya Nishiyama"
+    description = "Self-introduction"
+    copyright = "Custom copyright message"
+    theme = "dark" # `dark` or `light`
+    useResources = false
 
+    # Profile section
+    [params.profile]
+        name = "Tatsuya Nishiyama"
+        photo = "images/tatsuya.JPG"
 
-  [params.contact]
-  enable = true
-  formAction = "" #contact form works with formspree.io
+    # Section for links to social websites
+    [params.social]
+        title = "Links"
 
-  [params.footer]
-  email = "nityamanishi@gmail.com"
-  address = "Syouwaku, Japan"
-  googlemaps = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.9826367097858!2d136.92292561567277!3d35.1570537803199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370971a3cde13%3A0xbb16e801b5651df1!2z5ZCN5Y-k5bGL5bel5qWt5aSn5a2m!5e0!3m2!1sja!2sjp!4v1627418002540!5m2!1sja!2sjp"
+        [[params.social.list]]
+        icon = "fab fa-twitter"
+        url = "https://twitter.com/yama_nisshii"
+        title = "Twitter"
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = true
-    lineNumbersInTable = true
-    noClasses = true
-    style = "rainbow_dash"
-    tabWidth = 4
+        [[params.social.list]]
+        icon = "fab fa-github"
+        url = "https://github.com/ntatsuyag"
+        title = "GitHub"
+		
+		[[params.social.list]]
+        icon = "fas fa-edit"
+        url = "https://qiita.com/ntatsuya"
+        title = "Qiita"
+		
+		[[params.social.list]]
+        icon = "fas fa-envelope"
+        url = "mailto:nityamanishi@gmail.com"
+        title = "Mail"		
+
+    # Education section
+    [params.education]
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "Masters's Degree"
+        college = "Nagoya Institute of Technology"
+        dates = "2020 - Present"
+
+        [[params.education.list]]
+        degree = "Bachelor's Degree"
+        college = "Nagoya Institute of Technology"
+        dates = "2016 - 2020"
+
+    # Languages section
+    [params.language]
+        title = "Languages"
+
+        [[params.language.list]]
+        language = "japanese"
+        level = "Fluent"
+				
+        [[params.language.list]]
+        language = "English"
+        level = "Basic"
+
+    # Interests section
+    [params.hobbies]
+        title = "Hobbies"
+
+        [[params.hobbies.list]]
+        interest = "Break dance"
+
+    [params.aboutme]
+        description = "I'm 2nd grade Master's student at Nagoya Institute of Technology. My main areas of interest are Dialog system, Deep Learning, Machine learning, Neural language processing. I'm into investing in crypto currency. If you want to contact me, you send email to *nityamanishi@gmail.com*."
+
+    # Experiences section
+    [params.experiences]
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Intern"
+        dates = "2020/9"
+		link = "https://www.ai-shift.co.jp/techblog/1293"
+        company = "AI Shift"
+
+    # Projects section
+    [params.projects]
+        title = "Projects"
+
+        [[params.projects.list]]
+        title = "The Eighth Dialog System Technology Challenge (DSTC8)"
+        url = "https://sites.google.com/dstc.community/dstc8/aaai-20-workshop#h.p_S6XuCFAUkhQo"
+        description = "*Speaker-Aware BERT for Multi-Party Dialog Response Selection*, Tatsuya Nishiyama, Ryota Tanaka, Yuya Ishijima, Akinobu Lee"
+		
+    # Skills section
+    [params.skills]
+        title = "Skills"
+
+        [[params.skills.list]]
+        skill = "Python"
+        skillrating = 70 # out of 100
+                
+        [[params.skills.list]]
+        skill = "C, Java"
+        skillrating = 40
+		
+        [[params.skills.list]]
+        skill = "HTML/CSS"
+        skillrating = 15
+
+        [[params.skills.list]]
+        skill = "Git, Docker"
+        skillrating = 50
