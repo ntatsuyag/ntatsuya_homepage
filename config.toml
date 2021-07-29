@@ -3,6 +3,10 @@ languageCode = "en-us"
 theme = "sada"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+# for github pages
+publishDir = "docs"
+canonifyurls = true
+
 [params]
     name = "ntatsuya homepage"
     title = "ntatsuya homepage"
