@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://ntatsuyag.github.io/ntatsuya_homepage/"
 languageCode = "en-us"
 theme = "sada"
 disableKinds = ["taxonomy", "taxonomyTerm"]
