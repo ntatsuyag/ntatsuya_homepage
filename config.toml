@@ -1,6 +1,6 @@
 # Base information
 baseURL = "https://example.com"
-languageCode = "ja"
+languageCode = "en-gb"
 title = "ntatsuya homepage"
 # theme = "hugo-developer-portfolio"
 googleAnalytics = ""
